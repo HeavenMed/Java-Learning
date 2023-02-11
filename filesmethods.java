@@ -2,6 +2,8 @@
 import java.io.File;  // Import the File class
 import java.io.IOException;  // Import the IOException class to handle errors
 import java.io.FileWriter;   // Import the FileWriter class
+import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.util.Scanner; // Import the Scanner class to read text files
 
 public class filesmethods {
     public static void main(String[] args){
@@ -60,7 +62,39 @@ public class filesmethods {
         }
 
 
+        //In the following example, we use the Scanner class to 
+        //read the contents of the text file we created in the previous chapter:
 
+        try{
+
+            File documento = new File("documento.txt"); // criaremos um novo objeto p/ criar o documento
+            documento.createNewFile();
+
+        } catch(IOException e){
+            System.out.println("An error occurred.");
+        e.printStackTrace();
+        }
+
+        try{
+            File documento = new File("documento.txt");
+            FileWriter escrever2 = new FileWriter("documento.txt");
+            escrever2.write("Escrevendo algo no documento criado para ser lido");
+            escrever2.close();
+            Scanner reader = new Scanner("documento");
+            while(reader.hasNextLine()){
+                String data = reader.nextLine();
+                System.out.println(data);
+            }
+            reader.close();
+
+
+        }catch(IOException e){
+            System.out.println("An error occurred.");
+        e.printStackTrace();
+        }
+        
+
+        
 
 
 
