@@ -27,7 +27,8 @@ public class methodstutorial {
             //Como criar sobrecarga?
             //Sobrecarga é a capacidade de definir métodos para diferentes contextos, mas preservando seu nome
             // Para iss oacontecer, devemos mudar seus parâmetros, sua assinatura
-            
+
+            //O mesmo tipo setado antes do método deve ser o mesmo que irá retornar no return
 
 
 
