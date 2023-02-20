@@ -5,7 +5,7 @@ public class AtributosClasse {
     //The final keyword is useful when you want a variable to always store the same value, like PI (3.14159...).
     public static void main(String[] args) {
         AtributosClasse myObj = new AtributosClasse();
-        myObj.x = 25; // x is now 25
+        myObj.x = 25 + 5; // x is now 25
     System.out.println(myObj.x);
 
 
